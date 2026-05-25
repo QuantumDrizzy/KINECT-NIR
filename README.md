@@ -40,3 +40,14 @@ build.bat
 
 # Linux / WSL2
 make
+
+---
+
+Training & Export
+Bashpython dataset_generator.py
+python train.py
+python export.py
+TensorRT engine generation:
+Bashtrtexec --onnx=NIGHTWATCH_MOBILEVIT_XT.onnx --int8 --saveEngine=NIGHTWATCH_MOBILEVIT_XT.engine
+Run Dashboard
+Bashpython nightwatch_dashboard.py
